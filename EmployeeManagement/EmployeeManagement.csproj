@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <!--<Nullable>enable</Nullable>-->
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>employee_icon.ico.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\close_icon.ico" />
+    <None Remove="Resources\collapse_all_icon.ico" />
+    <None Remove="Resources\employee_icon.ico.ico" />
+    <None Remove="Resources\Pica.jpg" />
+    <None Remove="Resources\window_maximize_icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="employee_icon.ico.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\close_icon.ico" />
+    <Resource Include="Resources\collapse_all_icon.ico" />
+    <Resource Include="Resources\employee_icon.ico.ico" />
+    <Resource Include="Resources\Pica.jpg" />
+    <Resource Include="Resources\window_maximize_icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
